@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SaveDataPath>D:\</SaveDataPath>
+  <FarpostSellerNames>
+    <string>iTime27</string>
+    <string>istudiokhv</string>
+  </FarpostSellerNames>
+  <AvitoSellerNames>
+    <string>iwbm</string>
+  </AvitoSellerNames>
+  <Keywords />
+  <Cities />
+  <Trashwords />
+  <Switch>false</Switch>
+  <Close>false</Close>
+  <UseKeywords>false</UseKeywords>
+  <UseTrashwords>true</UseTrashwords>
+  <UseCitiesFilter>true</UseCitiesFilter>
+  <UseFarpost>true</UseFarpost>
+  <UseAvito>true</UseAvito>
+</Settings>

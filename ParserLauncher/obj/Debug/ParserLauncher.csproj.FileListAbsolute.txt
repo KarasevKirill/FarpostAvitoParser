@@ -1,0 +1,8 @@
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Debug\ParserLauncher.exe.config
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Debug\ParserLauncher.exe
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Debug\ParserLauncher.pdb
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Debug\Newtonsoft.Json.dll
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Debug\Newtonsoft.Json.xml
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Debug\ParserLauncher.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Debug\ParserLauncher.exe
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Debug\ParserLauncher.pdb

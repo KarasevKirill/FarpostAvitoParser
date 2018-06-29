@@ -1,0 +1,9 @@
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\bin\Debug\ParserSettings.exe.config
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\bin\Debug\ParserSettings.exe
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\bin\Debug\ParserSettings.pdb
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\Parser.Form1.resources
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\ParserSettings.Properties.Resources.resources
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\ParserSettings.csproj.GenerateResource.Cache
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\ParserSettings.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\ParserSettings.exe
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Debug\ParserSettings.pdb

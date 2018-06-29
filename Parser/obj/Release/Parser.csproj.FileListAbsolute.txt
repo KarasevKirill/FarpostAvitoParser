@@ -1,0 +1,8 @@
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Release\Parser.exe.config
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Release\Parser.exe
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Release\Parser.pdb
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Release\AngleSharp.dll
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Release\AngleSharp.xml
+D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Release\Parser.csproj.CoreCompileInputs.cache
+D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Release\Parser.exe
+D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Release\Parser.pdb

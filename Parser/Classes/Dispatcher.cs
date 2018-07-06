@@ -43,10 +43,7 @@ namespace Parser.Classes
             {
                 if (queue.QueueSettings.UseThisSite)
                 {
-                    var task = new Task(queue.DataCollection);
-                    task.Start();
-
-                    taskList.Add(task);
+                    taskList.Add(Task.Factory.StartNew(queue.DataCollection));
                 }
             }
 

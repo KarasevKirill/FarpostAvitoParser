@@ -104,26 +104,23 @@ namespace Parser
 
             try
             {
-                if (encoding != null)
+                using (Stream stream = Client.OpenRead(link))
                 {
-                    using (Stream stream = Client.OpenRead(link))
+                    if (encoding != null)
                     {
                         using (StreamReader reader = new StreamReader(stream, encoding))
                         {
                             html = reader.ReadToEnd();
                         }
                     }
-                }
-                else
-                {
-                    using (Stream stream = Client.OpenRead(link))
+                    else
                     {
                         using (StreamReader reader = new StreamReader(stream))
                         {
                             html = reader.ReadToEnd();
                         }
                     }
-                }
+                }                
             }
             catch
             {

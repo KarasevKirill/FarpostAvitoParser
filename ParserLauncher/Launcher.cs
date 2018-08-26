@@ -124,8 +124,8 @@ namespace ParserLauncher
         /// <returns></returns>
         public bool NeedUpdate()
         {
-            var serverVersion = Convert.ToDouble(Settings.AppVersion, System.Globalization.CultureInfo.InvariantCulture);
-            var clientVersion = Convert.ToDouble(CurrentVersion, System.Globalization.CultureInfo.InvariantCulture);
+            var serverVersion = Convert.ToDecimal(Settings.AppVersion, System.Globalization.CultureInfo.InvariantCulture);
+            var clientVersion = Convert.ToDecimal(CurrentVersion, System.Globalization.CultureInfo.InvariantCulture);
 
             return serverVersion > clientVersion;
         }

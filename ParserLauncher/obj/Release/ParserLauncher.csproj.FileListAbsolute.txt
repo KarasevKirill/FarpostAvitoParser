@@ -6,3 +6,5 @@ D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\bin\Release\Newtonsof
 D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Release\ParserLauncher.csproj.CoreCompileInputs.cache
 D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Release\ParserLauncher.exe
 D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Release\ParserLauncher.pdb
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Release\ParserLauncher.csprojAssemblyReference.cache
+D:\Programming\Projects\VisualStudio\Parser\ParserLauncher\obj\Release\ParserLauncher.csproj.CopyComplete

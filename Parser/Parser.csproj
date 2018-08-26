@@ -34,6 +34,9 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\packages\AngleSharp.0.9.9.2\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
+    <Reference Include="ParserLibrary">
+      <HintPath>..\ParserLibrary\bin\Debug\ParserLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -45,17 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Dispatcher.cs" />
-    <Compile Include="Classes\Lot.cs" />
-    <Compile Include="Classes\Model.cs" />
-    <Compile Include="Classes\Queue.cs" />
-    <Compile Include="Classes\Settings.cs" />
-    <Compile Include="Classes\SiteParser.cs" />
-    <Compile Include="Classes\QueueSettings.cs" />
-    <Compile Include="Interfaces\ILot.cs" />
-    <Compile Include="Interfaces\IQueue.cs" />
-    <Compile Include="Interfaces\ISiteParser.cs" />
-    <Compile Include="Interfaces\IQueueSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

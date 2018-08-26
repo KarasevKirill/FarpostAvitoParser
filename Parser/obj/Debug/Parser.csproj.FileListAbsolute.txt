@@ -6,3 +6,7 @@ D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Debug\AngleSharp.xml
 D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Debug\Parser.csproj.CoreCompileInputs.cache
 D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Debug\Parser.exe
 D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Debug\Parser.pdb
+D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Debug\Parser.csproj.CopyComplete
+D:\Programming\Projects\VisualStudio\Parser\Parser\obj\Debug\Parser.csprojAssemblyReference.cache
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Debug\ParserLibrary.dll
+D:\Programming\Projects\VisualStudio\Parser\Parser\bin\Debug\ParserLibrary.pdb

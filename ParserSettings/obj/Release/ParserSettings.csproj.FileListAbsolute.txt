@@ -7,3 +7,4 @@ D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Release\ParserSet
 D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Release\ParserSettings.csproj.CoreCompileInputs.cache
 D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Release\ParserSettings.exe
 D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Release\ParserSettings.pdb
+D:\Programming\Projects\VisualStudio\Parser\ParserSettings\obj\Release\ParserSettings.csprojAssemblyReference.cache

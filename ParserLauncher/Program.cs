@@ -16,6 +16,10 @@ namespace ParserLauncher
             WindowsPrincipal principal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
             bool IsAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
 
+#if DEBUG
+            IsAdmin = true;  
+#endif
+
             if (!IsAdmin)
             {
                 ProcessStartInfo info = new ProcessStartInfo();

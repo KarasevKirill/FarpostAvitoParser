@@ -42,11 +42,13 @@ namespace Parser
         {
             Console.WriteLine("Запуск парсера...");
 
-            var settingsPath = $"{Application.StartupPath}\\settings.xml";
+            var appPath = Application.StartupPath;
+
+            var settingsPath = $"{appPath}\\settings.xml";
 
             var parserSettings = Settings.GetSettings(settingsPath);
 
-            parserSettings.CurrentAppPath = Application.StartupPath;
+            parserSettings.CurrentAppPath = appPath;
 
             var queueSettings = GetQueueSettings(parserSettings);
            

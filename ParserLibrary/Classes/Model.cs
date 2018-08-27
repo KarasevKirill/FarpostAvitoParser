@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ParserLibrary
 {
@@ -74,8 +75,10 @@ namespace ParserLibrary
                 // сохраняем данные
                 File.WriteAllLines(filePath, data, Encoding.UTF8);
 
-                // проверяем, чтобы случайно не форматнуть диск
-                if (tempFolderPath.Equals("D:\\") || tempFolderPath.Equals("C:\\") || tempFolderPath.Equals("E:\\"))
+                // проверочка, чтобы случайно не форматнуть диск, один раз было :D
+                Regex regex = new Regex("^[A-Z]{1}:\\\\$", RegexOptions.IgnoreCase);
+               
+                if (regex.IsMatch(tempFolderPath))
                 {
                     Console.WriteLine($"Выбран недопустимый путь для удаления! Путь: {tempFolderPath}");
                     return;

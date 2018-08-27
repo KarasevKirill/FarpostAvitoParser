@@ -1,10 +1,10 @@
-﻿using System;
+﻿using ParserLibrary;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
-using ParserLibrary;
 
 namespace Parser
 {

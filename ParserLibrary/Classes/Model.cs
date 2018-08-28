@@ -75,10 +75,8 @@ namespace ParserLibrary
                 // сохраняем данные
                 File.WriteAllLines(filePath, data, Encoding.UTF8);
 
-                // проверочка, чтобы случайно не форматнуть диск, один раз было :D
-                Regex regex = new Regex("^[A-Z]{1}:\\\\$", RegexOptions.IgnoreCase);
-               
-                if (regex.IsMatch(tempFolderPath))
+                // проверочка, чтобы случайно не форматнуть диск, один раз было :D   
+                if (Regex.IsMatch(tempFolderPath, "^[A-Z]{1}:\\\\$", RegexOptions.IgnoreCase))
                 {
                     Console.WriteLine($"Выбран недопустимый путь для удаления! Путь: {tempFolderPath}");
                     return;

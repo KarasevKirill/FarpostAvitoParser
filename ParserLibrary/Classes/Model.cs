@@ -54,22 +54,23 @@ namespace ParserLibrary
 
                 foreach (var file in files)
                 {
-                    Stream fileStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-
-                    using (StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                    using (Stream fileStream = new FileStream(file, FileMode.Open, FileAccess.Read))
                     {
-                        string txt = "";
-
-                        while (streamReader.Peek() != -1)
+                        using (StreamReader streamReader = new StreamReader(fileStream, Encoding.UTF8))
                         {
-                            txt = streamReader.ReadLine();
+                            string txt = "";
 
-                            if (!string.IsNullOrEmpty(txt))
-                                data.Add(txt);
+                            while (streamReader.Peek() != -1)
+                            {
+                                txt = streamReader.ReadLine();
+
+                                if (!string.IsNullOrEmpty(txt))
+                                    data.Add(txt);
+                            }
                         }
-                    }
 
-                    fileStream.Close();
+                        fileStream.Close();
+                    }                                   
                 }
 
                 // сохраняем данные

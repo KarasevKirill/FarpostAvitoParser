@@ -2,7 +2,7 @@
 
 namespace ParserLibrary
 {
-    public struct Lot : ILot
+    public class Lot : ILot
     {
         /// <summary>
         /// Название лота
@@ -33,7 +33,7 @@ namespace ParserLibrary
         /// <param name="city">Город продажи лота</param>
         /// <param name="trashwords">Лишние слова, которые необходимо удалить из заголовка</param>
         /// <param name="useTrashwords">Признак удаления лишних слов</param>
-        public void Init(string price, string title, string link, string city, string[] trashwords, bool useTrashwords)
+        public Lot(string price, string title, string link, string city, string[] trashwords, bool useTrashwords)
         {
             Price = RemoveNewline(price);
             Title = RemoveNewline(RemoveTrashwords(title, trashwords, useTrashwords));

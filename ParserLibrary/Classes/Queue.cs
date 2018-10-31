@@ -89,11 +89,7 @@ namespace ParserLibrary
                         var city = QueueSettings.Parser.GetCityFromLink(link, QueueSettings.CutSymbolsFromLink);
 
                         if (CorrectCity(city) && CorrectTitle(title))
-                        {
-                            var newLot = new Lot();
-                            newLot.Init(price, title, link, city, QueueSettings.Trashwords, QueueSettings.UseTrashwords);
-                            lots.Add(newLot);
-                        }                          
+                            lots.Add(new Lot(price, title, link, city, QueueSettings.Trashwords, QueueSettings.UseTrashwords));                        
                     }
                     catch { }
                 }

@@ -11,7 +11,5 @@
         string City { get; set; }
 
         string GetData();
-
-        void Init(string price, string title, string link, string city, string[] trashwords, bool useTrashwords);
     }
 }

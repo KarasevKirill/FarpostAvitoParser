@@ -52,10 +52,11 @@ namespace Parser
 
             var queueSettings = GetQueueSettings(parserSettings);
            
-            var dispatcher = new Dispatcher(parserSettings, Queue.Factory(queueSettings));
+            var dispatcher = new Dispatcher(parserSettings, Queue.Factory(queueSettings), new Model());
 
             dispatcher.Start();
         }
+
 
         private static IQueueSettings[] GetQueueSettings(Settings parserSettings)
         {
@@ -84,7 +85,8 @@ namespace Parser
                     CutSymbolsFromLink  = 23,
                     LotsNumberFromPage  = 50,
                     Encoding            = Encoding.GetEncoding(1251),
-                    Parser              = new SiteParser()
+                    Parser              = new SiteParser(),
+                    DataManager         = new Model()
                 },
                 new QueueSettings()
                 {
@@ -109,7 +111,8 @@ namespace Parser
                     CutSymbolsFromLink  = 21,
                     LotsNumberFromPage  = 50,
                     Encoding            = null,
-                    Parser              = new SiteParser()
+                    Parser              = new SiteParser(),
+                    DataManager         = new Model()
                 }
             };          
         }

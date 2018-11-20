@@ -52,6 +52,7 @@
     <Compile Include="Classes\Settings.cs" />
     <Compile Include="Classes\SiteParser.cs" />
     <Compile Include="Interfaces\ILot.cs" />
+    <Compile Include="Interfaces\IDataManager.cs" />
     <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Interfaces\IQueueSettings.cs" />
     <Compile Include="Interfaces\ISiteParser.cs" />

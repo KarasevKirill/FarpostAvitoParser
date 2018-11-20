@@ -17,11 +17,16 @@ namespace ParserLibrary
         private List<Queue> Queues { get; set; }
 
         /// <summary>
+        /// Служит для сохранения данных
+        /// </summary>
+        private IDataManager DataManager { get; set; }
+
+        /// <summary>
         /// Конструктор
         /// </summary>
         /// <param name="parserSettings"></param>
         /// <param name="sites"></param>
-        public Dispatcher(Settings parserSettings, List<Queue> queues)
+        public Dispatcher(Settings parserSettings, List<Queue> queues, IDataManager dataManager)
         {
             Settings = parserSettings;
             Queues = queues;
@@ -56,7 +61,7 @@ namespace ParserLibrary
         /// </summary>
         private void SaveData()
         {
-            Model.SaveAllData($"{Settings.CurrentAppPath}\\data", Settings.SaveDataPath);
+            DataManager.SaveAllData($"{Settings.CurrentAppPath}\\data", Settings.SaveDataPath);
 
             Console.WriteLine($"Сохранение данных по адресу: {Settings.SaveDataPath} завершено!");
         }

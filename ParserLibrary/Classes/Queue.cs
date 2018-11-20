@@ -26,7 +26,7 @@ namespace ParserLibrary
         /// </summary>
         public void SaveTempData(string seller, List<ILot> lots)
         {
-            Model.TempSave(seller, lots, QueueSettings);
+            QueueSettings.DataManager.TempSave(seller, lots, QueueSettings);
         }
 
         /// <summary>

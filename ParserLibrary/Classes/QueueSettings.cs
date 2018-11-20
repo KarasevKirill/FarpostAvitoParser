@@ -112,7 +112,12 @@ namespace ParserLibrary
         /// <summary>
         /// Парсер
         /// </summary>
-        public ISiteParser Parser { get; set; }      
+        public ISiteParser Parser { get; set; }
+
+        /// <summary>
+        /// Модель, отвечает за сохранение результатов работы
+        /// </summary>
+        public IDataManager DataManager { get; set; }
 
         /// <summary>
         /// Если включен отбор по городам, то проверяет, находится ли лот в нужном городе

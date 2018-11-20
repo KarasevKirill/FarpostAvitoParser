@@ -48,6 +48,8 @@ namespace ParserLibrary
 
         ISiteParser Parser { get; set; }
 
+        IDataManager DataManager { get; set; }
+
         bool CorrectTitle(string title, Settings settings);
 
         bool CorrectCity(string currentCity, Settings settings);

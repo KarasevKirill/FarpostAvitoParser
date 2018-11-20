@@ -30,6 +30,7 @@ namespace ParserLibrary
         {
             Settings = parserSettings;
             Queues = queues;
+            DataManager = dataManager;
         }
 
         /// <summary>

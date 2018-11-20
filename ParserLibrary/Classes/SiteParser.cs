@@ -97,7 +97,7 @@ namespace ParserLibrary
         /// </summary>
         /// <param name="link"></param>
         /// <returns></returns>
-        public string GetPage(string link, Encoding encoding = null)
+        public string GetPage(string link, Encoding encoding)
         {
             string html = "";
 

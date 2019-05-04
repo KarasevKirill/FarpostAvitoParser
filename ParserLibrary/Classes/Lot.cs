@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace ParserLibrary
+﻿namespace ParserLibrary
 {
     public class Lot : ILot
     {
@@ -51,7 +49,7 @@ namespace ParserLibrary
         }
 
         /// <summary>
-        /// Удаляет при необходимости лишние слова и заголовка
+        /// Удаляет при необходимости лишние слова из заголовка
         /// </summary>
         /// <param name="text"></param>
         /// <param name="trashwords"></param>
@@ -63,7 +61,7 @@ namespace ParserLibrary
             {
                 foreach (var word in trashwords)
                 {
-                    text = Regex.Replace(text, word, "");
+                    text = text.Replace(word, "");
                 }
             }
 
@@ -77,8 +75,8 @@ namespace ParserLibrary
         /// <returns></returns>
         private string RemoveNewline(string text)
         {
-            text = Regex.Replace(text, "\r", "");
-            return Regex.Replace(text, "\n", "");
+            text = text.Replace("\r", "");
+            return text.Replace("\n", "");
         }
     }
 }

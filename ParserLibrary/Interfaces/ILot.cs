@@ -10,6 +10,12 @@
 
         string City { get; set; }
 
+        string[] Trashwords { get; set; }
+
+        bool UseTrashwords { get; set; }
+
         string GetData();
+
+        void RemoveTrashwords();
     }
 }

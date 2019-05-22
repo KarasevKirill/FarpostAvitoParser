@@ -14,7 +14,7 @@ namespace ParserLibrary
         /// <summary>
         /// Список очередей для парсинга
         /// </summary>
-        private List<Queue> Queues { get; set; }
+        private List<IQueue> Queues { get; set; }
 
         /// <summary>
         /// Служит для сохранения данных
@@ -26,7 +26,7 @@ namespace ParserLibrary
         /// </summary>
         /// <param name="parserSettings"></param>
         /// <param name="sites"></param>
-        public Dispatcher(Settings parserSettings, List<Queue> queues, IDataManager dataManager)
+        public Dispatcher(Settings parserSettings, List<IQueue> queues, IDataManager dataManager)
         {
             Settings = parserSettings;
             Queues = queues;

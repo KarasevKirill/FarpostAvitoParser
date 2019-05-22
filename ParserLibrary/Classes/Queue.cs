@@ -4,8 +4,9 @@ using System.Threading;
 
 namespace ParserLibrary
 {
-    public class Queue : IQueue
+    public class Queue<LotType> : IQueue where LotType: ILot
     {
+        private readonly Type _lotType;
 
         /// <summary>
         /// Сайт
@@ -19,6 +20,11 @@ namespace ParserLibrary
         public Queue(IQueueSettings queueSettings)
         {
             QueueSettings = queueSettings;
+
+            _lotType = typeof(LotType);
+
+            if (_lotType == null)
+                throw new ArgumentException();
         }
 
         /// <summary>
@@ -89,7 +95,19 @@ namespace ParserLibrary
                         var city = QueueSettings.Parser.GetCityFromLink(link, QueueSettings.CutSymbolsFromLink);
 
                         if (CorrectCity(city) && CorrectTitle(title))
-                            lots.Add(new Lot(price, title, link, city, QueueSettings.Trashwords, QueueSettings.UseTrashwords));                        
+                        {
+                            var newLot = Activator.CreateInstance(_lotType) as ILot;
+
+                            newLot.Price = price;
+                            newLot.Title = title;
+                            newLot.Link = link;
+                            newLot.City = city;
+                            newLot.Trashwords = QueueSettings.Trashwords;
+                            newLot.UseTrashwords = QueueSettings.UseTrashwords;
+                            newLot.RemoveTrashwords();
+
+                            lots.Add(newLot);
+                        }
                     }
                     catch { }
                 }
@@ -136,23 +154,6 @@ namespace ParserLibrary
             }
 
             return false;
-        }
-
-        /// <summary>
-        /// Фабрика для создания списка очередей из массива сайтов
-        /// </summary>
-        /// <param name="queueSettings"></param>
-        /// <returns></returns>
-        public static List<Queue> Factory(IQueueSettings[] queueSettings)
-        {
-            List <Queue> list = new List<Queue>();
-
-            foreach (var settings in queueSettings)
-            {
-                list.Add(new Queue(settings));
-            }
-
-            return list;
         }
     }
 }

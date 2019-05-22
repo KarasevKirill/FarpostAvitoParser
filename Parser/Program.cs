@@ -1,5 +1,6 @@
 ﻿using ParserLibrary;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Principal;
@@ -51,8 +52,13 @@ namespace Parser
             parserSettings.CurrentAppPath = appPath;
 
             var queueSettings = GetQueueSettings(parserSettings);
-           
-            var dispatcher = new Dispatcher(parserSettings, Queue.Factory(queueSettings), new Model());
+
+            var queues = new List<IQueue>();
+
+            queues.Add(new ParserLibrary.Queue<Lot>(queueSettings[0]));
+            queues.Add(new ParserLibrary.Queue<Lot>(queueSettings[1]));
+
+            var dispatcher = new Dispatcher(parserSettings, queues, new Model());
 
             dispatcher.Start();
         }
@@ -72,9 +78,9 @@ namespace Parser
                     SearchLotsCount     = "[id=\"itemsCount_placeholder\"]",
                     UrlPageNumber       = "/?page=",
                     SearchAllElements   = "[class=\"descriptionCell\"]",
-                    SearchLotTitle      = "[class=\"bulletinLink\"]",
-                    SearchLotPrice      = "[class=\"finalPrice\"]",
-                    SearchLotLink       = "[class=\"bulletinLink\"]",
+                    SearchLotTitle      = "[class=\"bulletinLink auto-shy\"]",
+                    SearchLotPrice      = "[class=\"price-block__final-price finalPrice\"]",
+                    SearchLotLink       = "[class=\"bulletinLink auto-shy\"]",
                     LinkPrefix          = "",
                     TempFilePrefix      = "farpost",
                     SaveTempFolderPath  = $"{parserSettings.CurrentAppPath}\\data",
@@ -97,9 +103,9 @@ namespace Parser
                     SiteLink            = "https://www.avito.ru/",
                     SearchLotsCount     = "[class=\"breadcrumbs-link-count js-breadcrumbs-link-count\"]",
                     UrlPageNumber       = "/rossiya?p=",
-                    SearchAllElements   = "[class=\"item_table-header\"]",
+                    SearchAllElements   = "[class=\"b-shop-list clearfix catalog-list catalog-list_table\"]",
                     SearchLotTitle      = "[class=\"item-description-title-link\"]",
-                    SearchLotPrice      = "[class=\"about \"]",
+                    SearchLotPrice      = "[class=\"about\"]",
                     SearchLotLink       = "[class=\"item-description-title-link\"]",
                     LinkPrefix          = "https://www.avito.ru",
                     TempFilePrefix      = "avito",

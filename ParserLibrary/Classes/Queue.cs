@@ -8,9 +8,6 @@ namespace ParserLibrary
     {
         private readonly Type _lotType;
 
-        /// <summary>
-        /// Сайт
-        /// </summary>
         public IQueueSettings QueueSettings { get; set; }
 
         /// <summary>
@@ -27,17 +24,11 @@ namespace ParserLibrary
                 throw new ArgumentException();
         }
 
-        /// <summary>
-        /// Временное сохранение данных
-        /// </summary>
         public void SaveTempData(string seller, List<ILot> lots)
         {
             QueueSettings.DataManager.TempSave(seller, lots, QueueSettings);
         }
 
-        /// <summary>
-        /// Сбор данных
-        /// </summary>
         public void DataCollection()
         {
             Console.WriteLine($"Запуск сбора данных с сайта {QueueSettings.SiteLink}");

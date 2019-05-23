@@ -36,8 +36,7 @@ namespace ParserLibrary
         }
 
         public void SaveAllData(string tempFolderPath, string saveFolderPath)
-        {          
-            
+        {  
             // удаляем замыкающий слеш, если есть
             if (saveFolderPath.EndsWith("\\"))
                 saveFolderPath.Remove(saveFolderPath.Length - 1);

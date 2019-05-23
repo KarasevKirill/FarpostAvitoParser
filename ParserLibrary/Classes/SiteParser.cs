@@ -24,13 +24,6 @@ namespace ParserLibrary
             Parser = new HtmlParser();
         }
 
-        /// <summary>
-        /// Возвращает количество страниц продавца
-        /// </summary>
-        /// <param name="link">Ссылка на первую страницу продавца</param>
-        /// <param name="request">css селекторы для получения элемента, хранящего количество лотов продавца</param>
-        /// <param name="lotsOnPage">Количество лотов на странице</param>
-        /// <returns>Количество страниц</returns>
         public int GetPageNumber(string link, string request, int lotsOnPage, Encoding encoding = null)
         {
             var html = GetPage(link, encoding);
@@ -78,25 +71,14 @@ namespace ParserLibrary
             return document.QuerySelectorAll(request);
         }
 
-        /// <summary>
-        /// Возвращает город продажи лота из его ссылки
-        /// </summary>
-        /// <param name="link"></param>
-        /// <param name="position"></param>
-        /// <returns></returns>
-        public string GetCityFromLink(string link, int position = 1)
+        public string GetCityFromLink(string link, int deleteSymbolsCount)
         {
-            link = link.Remove(0, position);
+            link = link.Remove(0, deleteSymbolsCount);
 
             // оставляем из ссылки только город
             return link.Remove(link.IndexOf("/"));
         }
 
-        /// <summary>
-        /// Возвращает html разметку нужной страницы
-        /// </summary>
-        /// <param name="link"></param>
-        /// <returns></returns>
         public string GetPage(string link, Encoding encoding)
         {
             string html = "";
@@ -130,11 +112,6 @@ namespace ParserLibrary
             return html;
         }
 
-        /// <summary>
-        /// Удаляет из цены все символы, не являющиеся числами
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
         public string GetNumbers(string text)
         {
             return Regex.Replace(text, "[^0-9]+", "");

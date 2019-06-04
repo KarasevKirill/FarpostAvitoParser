@@ -59,4 +59,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy ..\..\..\ParserSettings\bin\Debug\settings.xml .\settings.xml</PostBuildEvent>
+  </PropertyGroup>
 </Project>

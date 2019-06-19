@@ -4,10 +4,8 @@ using System.Threading;
 
 namespace ParserLibrary
 {
-    public class Queue<LotType> : IQueue where LotType: ILot
+    public class Queue : IQueue
     {
-        private readonly Type _lotType;
-
         public IQueueSettings QueueSettings { get; set; }
 
         /// <summary>
@@ -17,11 +15,6 @@ namespace ParserLibrary
         public Queue(IQueueSettings queueSettings)
         {
             QueueSettings = queueSettings;
-
-            _lotType = typeof(LotType);
-
-            if (_lotType == null)
-                throw new ArgumentException();
         }
 
         public void SaveTempData(string seller, List<ILot> lots)
@@ -87,7 +80,7 @@ namespace ParserLibrary
 
                         if (CorrectCity(city) && CorrectTitle(title))
                         {
-                            var newLot = Activator.CreateInstance(_lotType) as ILot;
+                            var newLot = QueueSettings.LotFactory.GetNewLot();
 
                             newLot.Price = price;
                             newLot.Title = title;

@@ -1,4 +1,5 @@
 ﻿using ParserLibrary;
+using ParserLibrary.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,8 +56,8 @@ namespace Parser
 
             var queues = new List<IQueue>();
 
-            queues.Add(new ParserLibrary.Queue<Lot>(queueSettings[0]));
-            queues.Add(new ParserLibrary.Queue<Lot>(queueSettings[1]));
+            queues.Add(new Queue(queueSettings[0]));
+            queues.Add(new Queue(queueSettings[1]));
 
             var dispatcher = new Dispatcher(parserSettings, queues, new Model());
 
@@ -92,7 +93,8 @@ namespace Parser
                     LotsNumberFromPage  = 50,
                     Encoding            = Encoding.GetEncoding(1251),
                     Parser              = new SiteParser(),
-                    DataManager         = new Model()
+                    DataManager         = new Model(),
+                    LotFactory          = new LotFactory<Lot>()
                 },
                 new QueueSettings()
                 {
@@ -118,7 +120,8 @@ namespace Parser
                     LotsNumberFromPage  = 50,
                     Encoding            = null,
                     Parser              = new SiteParser(),
-                    DataManager         = new Model()
+                    DataManager         = new Model(),
+                    LotFactory          = new LotFactory<Lot>()
                 }
             };          
         }

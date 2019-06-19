@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Classes\Dispatcher.cs" />
     <Compile Include="Classes\Lot.cs" />
+    <Compile Include="Classes\LotFactory.cs" />
     <Compile Include="Classes\Model.cs" />
     <Compile Include="Classes\Queue.cs" />
     <Compile Include="Classes\QueueSettings.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Classes\SiteParser.cs" />
     <Compile Include="Interfaces\ILot.cs" />
     <Compile Include="Interfaces\IDataManager.cs" />
+    <Compile Include="Interfaces\ILotFactory.cs" />
     <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Interfaces\IQueueSettings.cs" />
     <Compile Include="Interfaces\ISiteParser.cs" />

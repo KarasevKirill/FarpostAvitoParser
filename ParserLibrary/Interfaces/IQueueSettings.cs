@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using ParserLibrary.Interfaces;
+using System.Text;
 
 namespace ParserLibrary
 {
@@ -118,6 +119,11 @@ namespace ParserLibrary
         /// Модель, отвечает за сохранение результатов работы
         /// </summary>
         IDataManager DataManager { get; set; }
+
+        /// <summary>
+        /// Фабрика для производства экземпляров, в которых будут хранится данные лотов
+        /// </summary>
+        ILotFactory LotFactory { get; set; }
 
         /// <summary>
         /// Если включен отбор по городам, то проверяет, находится ли лот в нужном городе

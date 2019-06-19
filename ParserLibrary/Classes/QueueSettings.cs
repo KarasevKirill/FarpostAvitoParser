@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using ParserLibrary.Interfaces;
+using System.Text;
 
 namespace ParserLibrary
 {
@@ -49,6 +50,8 @@ namespace ParserLibrary
         public ISiteParser Parser { get; set; }
 
         public IDataManager DataManager { get; set; }
+
+        public ILotFactory LotFactory { get; set; }
 
         public bool CorrectCity(string currentCity, Settings settings)
         {

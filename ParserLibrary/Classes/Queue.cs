@@ -73,6 +73,7 @@ namespace ParserLibrary
                     // просто глушим эксепшен, т.к. если лот кинул эксепшен, у него отсутствуют нужные поля и он нам не нужен
                     try
                     {
+                        // TODO: вынести код получения данных со страницы и код заполнения полей лота
                         var price = QueueSettings.Parser.GetPriceFromElement(element, QueueSettings.SearchLotPrice);
                         var title = QueueSettings.Parser.GetTextFromElement(element, QueueSettings.SearchLotTitle);
                         var link = QueueSettings.Parser.GetStringFromAttribute(element, QueueSettings.SearchLotLink, "href", QueueSettings.LinkPrefix);

@@ -105,8 +105,7 @@ namespace ParserLibrary
             }
             catch
             {
-                Console.WriteLine($"Не удалось подключиться к {link}\r\nВозможно, пропало соединение с интернетом или сайт недоступен. Выполнение данной очереди будет прекращено.");
-                Thread.CurrentThread.Abort();
+                Console.WriteLine($"Не удалось подключиться к {link}\r\nВозможно, пропало соединение с интернетом или сайт недоступен.");
             }
 
             return html;
